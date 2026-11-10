@@ -41,6 +41,11 @@ body {
   transition: opacity 0.2s;
 }
 
+#register-btn.btn-register {
+  background-color: #16a34a !important;
+  color: #ffffff !important;
+}
+
 .btn-register:hover {
   opacity: 0.85;
 }
