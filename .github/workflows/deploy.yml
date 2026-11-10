@@ -1,0 +1,22 @@
+name: Deploy to GitHub Pages
+
+# main 分支有任何推送时，自动同步到 gh-pages 分支，触发 GitHub Pages 重新发布
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync main to gh-pages
+        run: git push origin HEAD:gh-pages --force
