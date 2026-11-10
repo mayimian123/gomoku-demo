@@ -29,9 +29,9 @@ body {
   letter-spacing: 1px;
 }
 
-/* 注册按钮（当前为蓝色） */
+/* 注册按钮（绿色） */
 .btn-register {
-  background-color: #2563eb;
+  background-color: #16a34a;
   color: #ffffff;
   border: none;
   padding: 10px 22px;
