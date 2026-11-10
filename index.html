@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>五子棋小游戏</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 顶部导航栏 -->
+  <header class="navbar">
+    <div class="brand">Gomoku</div>
+    <button id="register-btn" class="btn-register">注册</button>
+  </header>
+
+  <main class="container">
+    <!-- 首页标题 -->
+    <h1 id="site-title" class="site-title">欢迎来到五子棋小游戏</h1>
+    <p class="subtitle">黑白双方轮流落子，先连成五子者获胜。</p>
+
+    <div class="status-bar">
+      <span id="status">当前回合：<strong>黑棋</strong></span>
+      <button id="restart-btn" class="btn-secondary">重新开始</button>
+    </div>
+
+    <canvas id="board" width="450" height="450"></canvas>
+
+    <p id="welcome" class="welcome"></p>
+  </main>
+
+  <!-- 注册弹窗 -->
+  <div id="register-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>注册账号</h2>
+      <form id="register-form">
+        <label>
+          用户名
+          <input type="text" id="username" placeholder="请输入用户名" required />
+        </label>
+        <label>
+          邮箱
+          <input type="email" id="email" placeholder="请输入邮箱" required />
+        </label>
+        <label>
+          密码
+          <input type="password" id="password" placeholder="请输入密码" minlength="6" required />
+        </label>
+        <div class="modal-actions">
+          <button type="button" id="cancel-btn" class="btn-secondary">取消</button>
+          <button type="submit" class="btn-register">提交注册</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">一个用于测试的简单前端网站</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
